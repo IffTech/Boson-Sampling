@@ -68,4 +68,4 @@ by Andrew Tanggara
 
 Note: I didn't watch much of this presentation compared to others but
 it seemed to be very well made and is given by Alex Arkhipov himself!
-(Quantum computing with noninteracting particles - Alex Arkhipov)[https://www.youtube.com/watch?v=fpRgp8sxcyo]
+[Quantum computing with noninteracting particles - Alex Arkhipov](https://www.youtube.com/watch?v=fpRgp8sxcyo)
