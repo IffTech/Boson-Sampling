@@ -2,12 +2,78 @@
 
 The following library was developed to better understand
 [Aaronson-Arkhipov Boson Sampling (AABS)](https://arxiv.org/pdf/1011.3245.pdf) 
-and its potential for proving quantum supremacy by simulating
-the behavior of individual photon fock state inputs through a 
-random unitary based linear interferometer.
+by simulating the behavior of fock state inputs through a random unitary based linear interferometer and calculating the probabilities of certain fock state ouptuts.
 
-All functions are found in the `boson_sampling.py` file, which is invoked
-by the other demonstration scripts.
+
+## Requirements
+
+To run all the files in this repository, please create a conda environment using the provided `environments.yml` file:
+
+```
+conda env create --file environment.yml
+```
+
+## Usage
+
+1. Import `boson_sampling` for core functionality and the `random_interferometer()` function from `strawberryfields.utils` to set up a random interferometer.
+
+    ```python
+    import boson_sampling as bs
+    from strawberryfields.utils import random_interferometer
+    ```
+
+2. Create your random_interferometer
+
+    ```python
+    # creates a 4x4 unitary matrix
+    random_interferometer = random_interferometer(4)
+    ```
+
+3. Create your input Fock states
+
+    ```python
+    # 0 photons in mode 1
+    # 1 photon in mode 2
+    # 3 photons in mode 3
+    # 4 photons in mode 4
+    photons_in = [0,1,3,4]
+    ```
+
+4. You can either:
+
+    a. Measure the probability of a certain output state 
+
+    ```python
+    photons_out = [0,0,0,8]
+    output_probability = bs.output_probability(photons_in, photons_out, random_interferometer)
+    ```
+
+    b. OR Measure the probability of ALL output states
+
+    ```python
+    for photon_out_configuration in bs.gen_output_configurations(sum(photons_in), len(photons_in)):
+
+        output_probability = bs.output_probability(photons_in, photon_out_configuration, random_interferometer)
+
+        print("Probability of photon output {0} : {1}".format(photon_out_configuration, output_probability))
+    ```
+
+## Demo Files
+
+Demonstration files have been included to explain different possible usages with `boson_sampling`.
+
+All files prefixed with `bs_` are dedicated solely to `boson_sampling.py`. 
+
+However, there are files prefixed with `sf_` that show how one could verify, or run 
+
+* `bs_single_photon_test.py` - demonstrates a single photon entering the interferometer and calculating the probability of all possible outputs
+* `bs_multiple_photon_test.py` - demonstrates multiple photons entering the interferometer and calculating the probability of all possible outputs, emphasizing how `gen_output_configurations()` can come in handy for such scenarios.
+* `bs_aabs_setup.py` - demonstrates a setup similar to what would be called for in the Aaronson-Arkhipov paper with a multiple, single-photon fock state input with the modes right next to eachother and how the probability of detecting a "collision" (an output state that has multiple photons in a single mode) is incredibly low
+* `bs_aabs_scaling.py` - Is essentially a duplicate of `bs_aabs_setup.py` but has an outer loop designed to make the interferometer larger with each iteration but keeps the number of inputted photons identical so one can observe the decreasing probability of collision.
+
+* `sf_single_photon_test.py` - Is `bs_single_photon_test.py` but implemented with Xanadu's Strawberry Fields framework
+* `sf_multiple_photon_test.py` - Is `bs_multiple_photon_test.py` but implemented with Xanadu's Strawberry Fields framework.
+
 
 ## Credits
 
@@ -68,4 +134,4 @@ by Andrew Tanggara
 
 Note: I didn't watch much of this presentation compared to others but
 it seemed to be very well made and is given by Alex Arkhipov himself!
-(Quantum computing with noninteracting particles - Alex Arkhipov)[https://www.youtube.com/watch?v=fpRgp8sxcyo]
+[Quantum computing with noninteracting particles - Alex Arkhipov](https://www.youtube.com/watch?v=fpRgp8sxcyo)
