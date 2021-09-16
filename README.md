@@ -2,6 +2,7 @@
 
 The following library was developed to better understand
 [Aaronson-Arkhipov Boson Sampling (AABS)](https://arxiv.org/pdf/1011.3245.pdf) 
+(the acronym "AABS" for the particular Boson Sampling setup was encountered in Kruse et al.'s paper [A detailed study of Gaussian Boson Sampling](http://arxiv.org/abs/1801.07488))
 by simulating the behavior of fock state inputs through a random unitary based linear interferometer and calculating the probabilities of certain fock state ouptuts.
 
 
@@ -110,7 +111,7 @@ numpy array (works with ordinary lists too) and is part of the
 by Gard et al.
 
 [A detailed study of Gaussian Boson Sampling](http://arxiv.org/abs/1801.07488)
-by Kruse et al.
+provided the origin of the AABS acronym used throughout the project and has a very nice illustration on page 2 that describes the column and row indexing necessary to generate the proper submatrix that Sevag Gharibian also goes over.
 
 ## Websites
 
