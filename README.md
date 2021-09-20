@@ -75,6 +75,9 @@ However, there are files prefixed with `sf_` that show how identical behavior ca
 * `sf_single_photon_test.py` - Is `bs_single_photon_test.py` but implemented with Xanadu's Strawberry Fields framework
 * `sf_multiple_photon_test.py` - Is `bs_multiple_photon_test.py` but implemented with Xanadu's Strawberry Fields framework.
 
+## Contributing
+
+If you find a bug or have an idea to improve the library, please feel free to either make an Issue or a Pull Request with your suggested changes! If you are contributing code, please do note that this library attempts to follow the [PEP-8 Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/#package-and-module-names).
 
 ## Credits
 
