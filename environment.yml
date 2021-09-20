@@ -1,9 +1,0 @@
-name: boson-sampling-library
-dependencies:
-  - numpy 
-  - scipy
-  - sympy
-  - pip
-  - pip:
-    - thewalrus
-    - strawberryfields
