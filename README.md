@@ -6,20 +6,20 @@ The following library was developed to better understand
 by simulating the behavior of fock state inputs through a random unitary based linear interferometer and calculating the probabilities of certain fock state ouptuts.
 
 
-## Requirements
+## Installation
 
-To run all the files in this repository, please create a conda environment using the provided `environments.yml` file:
+To use the library, please clone the library and within the directory (as well as having your favorite python environment activate) run the following:
 
 ```
-conda env create --file environment.yml
+pip install .
 ```
 
 ## Usage
 
-1. Import `boson_sampling` for core functionality and the `random_interferometer()` function from `strawberryfields.utils` to set up a random interferometer.
+1. Import `bosonsampling` for core functionality and the `random_interferometer()` function from `strawberryfields.utils` to set up a random interferometer.
 
     ```python
-    import boson_sampling as bs
+    import bosonsampling as bs
     from strawberryfields.utils import random_interferometer
     ```
 
@@ -59,13 +59,13 @@ conda env create --file environment.yml
         print("Probability of photon output {0} : {1}".format(photon_out_configuration, output_probability))
     ```
 
-## Demo Files
+## Example Files
 
-Demonstration files have been included to explain different possible usages with `boson_sampling`.
+Example files have been included to explain different possible usages with `bosonsampling` and can be found in the `examples` folder.
 
-All files prefixed with `bs_` are dedicated solely to `boson_sampling.py`. 
+All files prefixed with `bs_` are dedicated solely to `bosonsampling.py`. 
 
-However, there are files prefixed with `sf_` that show how one could verify, or run 
+However, there are files prefixed with `sf_` that show how identical behavior can be obtained with [Strawberry Fields](https://strawberryfields.ai/) (great for verifying results) and how `bosonsampling` can be used in conjunction with it as well.
 
 * `bs_single_photon_test.py` - demonstrates a single photon entering the interferometer and calculating the probability of all possible outputs
 * `bs_multiple_photon_test.py` - demonstrates multiple photons entering the interferometer and calculating the probability of all possible outputs, emphasizing how `gen_output_configurations()` can come in handy for such scenarios.
@@ -133,6 +133,5 @@ by Peter Rohde
 [Gaussian Boson Sampling Complexity - Part 1](https://www.youtube.com/watch?v=G3SGty8sbnw)
 by Andrew Tanggara 
 
-Note: I didn't watch much of this presentation compared to others but
-it seemed to be very well made and is given by Alex Arkhipov himself!
+Note: This video was barely consulted, but appred to be very well made and is given by Alex Arkhipov himself!
 [Quantum computing with noninteracting particles - Alex Arkhipov](https://www.youtube.com/watch?v=fpRgp8sxcyo)
