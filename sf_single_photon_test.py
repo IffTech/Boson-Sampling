@@ -14,7 +14,7 @@ from strawberryfields.utils import random_interferometer
 from sympy.utilities.iterables import multiset_permutations
 import numpy as np
 
-import boson_sampling as bs
+import bosonsampling as bs
 
 boson_sampling = sf.Program(4)
 

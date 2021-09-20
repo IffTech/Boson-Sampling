@@ -1,6 +1,6 @@
 # See `bs_aabs_setup.py` for more details
 
-import boson_sampling as bs
+import bosonsampling as bs
 from sympy.utilities.iterables import multiset_permutations
 from strawberryfields.utils import random_interferometer
 import numpy as np

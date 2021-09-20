@@ -9,7 +9,7 @@
 # set up is used. In `bs_aabs_scaling.py` the interferometer will
 # increase in size
 
-import boson_sampling as bs
+import bosonsampling as bs
 from sympy.utilities.iterables import multiset_permutations
 from strawberryfields.utils import random_interferometer
 import numpy as np

@@ -1,7 +1,7 @@
 # A single photon is fed into an interferometer and the probability of
 # the photon being detected in another mode are calculated.
 
-import boson_sampling as bs
+import bosonsampling as bs
 from strawberryfields.utils import random_interferometer
 
 # Generate Random (4 x 4) unitary to represent an interferometer
