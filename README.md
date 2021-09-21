@@ -8,7 +8,13 @@ by simulating the behavior of fock state inputs through a random unitary based l
 
 ## Installation
 
-To use the library, please clone the library and within the directory (as well as having your favorite python environment activate) run the following:
+You can either
+
+```
+pip install bosonsampling
+```
+
+or clone the library and within the directory (as well as having your favorite python environment activate) run the following:
 
 ```
 pip install .
