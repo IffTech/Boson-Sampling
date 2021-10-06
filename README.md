@@ -3,7 +3,7 @@
 The following library was developed to better understand
 [Aaronson-Arkhipov Boson Sampling (AABS)](https://arxiv.org/pdf/1011.3245.pdf) 
 (the acronym "AABS" for the particular Boson Sampling setup was encountered in Kruse et al.'s paper [A detailed study of Gaussian Boson Sampling](http://arxiv.org/abs/1801.07488))
-by simulating the behavior of fock state inputs through a random unitary based linear interferometer and calculating the probabilities of certain fock state ouptuts.
+by simulating the behavior of Fock state inputs through a random unitary based linear interferometer and calculating the probabilities of certain fock state ouptuts.
 
 
 ## Installation
@@ -142,5 +142,5 @@ by Peter Rohde
 [Gaussian Boson Sampling Complexity - Part 1](https://www.youtube.com/watch?v=G3SGty8sbnw)
 by Andrew Tanggara 
 
-Note: This video was barely consulted, but appred to be very well made and is given by Alex Arkhipov himself!
+Note: This video was barely consulted, but appears to be very well made and is given by Alex Arkhipov himself!
 [Quantum computing with noninteracting particles - Alex Arkhipov](https://www.youtube.com/watch?v=fpRgp8sxcyo)
